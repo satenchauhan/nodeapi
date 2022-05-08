@@ -1,0 +1,35 @@
+GET http://localhost:3000 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MzE1MzExOTIsImV4cCI6MTYzMTUzMTIzMiwiYXVkIjoiNjEzZjE4MGM3NjYzYTY2MjIwODJkNWJiIiwiaXNzIjoiYXBpLmdldG9uZXF1b3RlLmNvbSJ9.3OAyPukoZEGP7YwwNmxqxC-dNdhH6KjADDcxqCyeuK0
+
+
+### Login route
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{  
+    "email": "anushkasharma@gmail.com",
+    "password": "123456"
+}
+
+
+### Register route
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "email": "jhondoe@gmail.com",
+    "password": "123456"
+}
+
+
+### Refresh-Token
+POST http://localhost:3000/auth/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MzE1MzExOTIsImV4cCI6MTY2MzA4ODc5MiwiYXVkIjoiNjEzZjE4MGM3NjYzYTY2MjIwODJkNWJiIiwiaXNzIjoiYXBpLmdldG9uZXF1b3RlLmNvbSJ9.j754-bEHeA3nk73gClOtS8Ci4mugnzJhnsBTdK1LlQo"
+}
+
+
+### logout
+DELETE  http://localhost:3000/auth/logout
